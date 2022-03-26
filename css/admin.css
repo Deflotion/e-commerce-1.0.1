@@ -1,13 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
 .row{
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
 }
 
 .col-md-4{
@@ -62,7 +55,7 @@ td{
     padding: 2em;
     background: #FFF;
     margin-top: 2em;
-    border-radius: 10px;
+    /* border-radius: 10px;     */
     box-shadow: 0 0 5px rgba(0, 0, 0, .3);
 }
 
@@ -82,101 +75,4 @@ td{
     border: none;
     border-radius: 50px;
     cursor: pointer;
-}
-:root{
-    --white : #fff;
-    --navy: #0E2A47;
-    --primary: #007bff;
-    --info: #17a2b8;
-    --success: #28a745;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --dark: #343a40;
-    --secondary: #6c757d;
-}
-
-.mt-3{
-    margin-top: 18px;
-}
-
-.mt-4{
-    margin-top: 24px;
-}
-
-.mt-5{
-    margin-top: 30px;
-}
-
-body {
-    width: 100%;
-    overflow-x: hidden;
-    background-color: #f1f1f1;
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-between;
-}
-
-.sidebar{
-    background-color: var(--navy);
-    min-height: 100vh;
-    width: 20%;
-}
-
-.sidebar-brand{
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
-    padding: 2em 1em;
-}
-
-.sidebar ul{
-    list-style: none;
-}
-
-.sidebar ul li{
-    display: flex;
-    width: 92%;
-    align-items: center;
-    float: right;
-    margin-bottom: 10px;
-}
-
-.sidebar ul .active a{
-    color: var(--navy);
-    background-color: var(--white);
-    transition: .2s all;
-    font-weight: 600;
-}
-
-
-.sidebar ul li:hover a{
-    color: var(--navy);
-    background-color: var(--white);
-    transition: .2s all;
-    font-weight: 600;
-}
-
-.sidebar ul li a{
-    padding: .7em 1.5em;
-    width: 100%;
-    text-decoration: none;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    color: var(--white);
-}
-
-
-main{
-    width: 80%;
-    min-height: 100vh;
-    display: flex;
-    padding: 2em;
-    flex-direction: column;
-}
-
-.section-title{
-    color: var(--navy);
-    font-weight: 600;
-    font-size: 24px;
 }
