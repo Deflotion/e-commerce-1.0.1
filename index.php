@@ -22,22 +22,22 @@
             <?php
                 session_start();
 
-                if (isset($_SESSION['status'])) {
-                    if ($_SESSION['status'] == "admin") {
+                if (isset($_SESSION['username'])) {
+                    if ($_SESSION['username'] == "proteq") {
                         echo '
                         <li class="nav-item">
-                            <a href="admin/index.php">Login</a>
+                            <a href="admin/index.php">Index</a>
                         </li>';
                     } else {
                         echo '
                             <li class="nav-item">
-                                <a href="logout.php" class="nav-link active">Logout</a>
+                                <a href="logout.php" class="nav-link">Logout</a>
                             </li>';
                     }
                 } else {
                     echo '
                             <li class="nav-item">
-                                <a href="./login/login.php" class="nav-link active">Login</a>
+                                <a href="./login/login.php" class="nav-link">Login</a>
                             </li>';
                 }
             ?>
@@ -53,7 +53,7 @@
                 include 'db/koneksi.php';
                 $query = 'SELECT * FROM printer_tb ORDER BY IdPrinter DESC';
                 $rs    = mysqli_query($conn, $query);
-            while ($dat = mysqli_fetch_array($rs)) {?>
+            while ($data = mysqli_fetch_array($rs)) {?>
             <div class="col-md-3">
                 <div class="card">
                     <div class="cardheader">
@@ -61,9 +61,6 @@
                         <a href="cart/index.php?id=<?php echo $data['IdPrinter']; ?>&action=add">
                             <h4>Add</h4>
                         </a>
-                    </div>
-                    <div class="round-card">
-                        <h6 class="h-round">buy</h6>
                     </div>
                     </div>
             <div class="card-image">

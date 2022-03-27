@@ -75,6 +75,10 @@
     width: 90%;
 }
 
+.round-card a{
+    text-decoration: none;
+    color: blue;
+}
 .card-body {
     display: flex;
     margin-top: 20px;
