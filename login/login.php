@@ -1,3 +1,5 @@
+<!-- Danny Revaldo
+XII-RPL 2 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +12,7 @@
 <body>
     <div class="container">
         <form method="POST" class="login" action="../login/function.php">
+            <!-- untuk memastikan data ada didatabase -->
             <?php
                 if (isset($_GET['pesan'])) {
                     if ($_GET['pesan'] == "gagal") {
@@ -21,9 +24,11 @@
             ?>
             <p class = login-text style="font-size: 2rem; font-weight: 800;">Login</p><br>
             <div class = input-group>
+                <!-- untuk input username -->
                 <input type="username" placeholder="Username" name="username" required></input>
             </div>
             <div class = input-group>
+                <!-- untuk unput password -->
                 <input type="password" placeholder="Password" name="password" required></input>
             </div>
             <div class = input-group>
