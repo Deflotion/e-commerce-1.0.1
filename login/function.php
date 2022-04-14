@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../db/koneksi.php';
 
 $username = $_POST['username'];

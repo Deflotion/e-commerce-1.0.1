@@ -127,7 +127,7 @@
         }
     ?>
     <div class="container">
-        <h2 class="section-title">keranjang Belanja Anda</h2>
+        <h2 class="section-title">Keranjang Belanja Anda</h2>
         <form method="POST">
             <table id="t01">
                 <tr>
@@ -147,25 +147,24 @@
                     $index = 0;
                     for ($i = 0; $i < count($cart); $i++) {
                     $s += $cart[$i]->price * $cart[$i]->quantity;?>
-                <tr>
-                    <td><?php echo $cart[$i]->id; ?></td>
-                    <td><?php echo $cart[$i]->name; ?> </td>
-                    <td>Rp.<?php echo number_format($cart[$i]->price); ?></td>
-                    <td>
-                        <input type="number" class="form-number" min="1" value="<?php echo
-                                                                                    $cart[$i]->quantity; ?>" name="quantity[]">
-                    </td>
-                    <td> Rp.<?php echo number_format(
-                                    $cart[$i]->price * $cart[$i]->quantity
-                                ); ?> </td>
-                    <td style="display: flex;align-items: center;justify-content: center;">
-                        <a href="index.php?index=<?php echo $index; ?>" class="btn-danger"
-                            onclick="return confirm('Apa Kamu Yakin Ingin Menghapus Ini?')">
-                            Hapus
-                        </a>
-                    </td>
-                </tr>
-                <?php $index++;
+                        <tr>
+                            <td><?php echo $cart[$i]->id; ?></td>
+                            <td><?php echo $cart[$i]->name; ?> </td>
+                            <td>Rp.<?php echo number_format($cart[$i]->price); ?></td>
+                            <td>
+                                <input type="number" class="form-number" min="1" value="<?php echo$cart[$i]->quantity; ?>" name="quantity[]">
+                            </td>
+                            <td> Rp.<?php echo number_format(
+                                            $cart[$i]->price * $cart[$i]->quantity
+                                        ); ?> </td>
+                            <td style="display: flex;align-items: center;justify-content: center;">
+                                <a href="index.php?index=<?php echo $index; ?>" class="btn-danger"
+                                    onclick="return confirm('Apa Kamu Yakin Ingin Menghapus Ini?')">
+                                    Hapus
+                                </a>
+                            </td>
+                        </tr>
+                        <?php $index++;
                     }
                 ?>
                 <tr>
